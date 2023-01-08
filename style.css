@@ -1,114 +1,39 @@
-.light {
-    background-color: #c5e6cd;
-    color: #2b2246;
-  }
-  
-.dark {
-    background-color: #2b2246;
-    color: #c5e6cd;
-  }
-/* page style */
-a, a:focus, a:active, a:hover, object, embed { outline: none; text-decoration: none; }
-:-moz-any-link:focus { outline: none; }
-input::-moz-focus-inner { border: 0; }
-:focus { outline: 0; }
-body { background: #333; }	
-.brand { padding: 10px 40px !important; }
-.navbar { border-bottom: 4px solid #888; }
+/* Mise en page */
+.container {
+  display: flex;
+}
 
+.cards {
+  width: 200px;
+  height: 200px;
+  transform: translateY(300px);
+/*   transform: translateY(0px); */
+  transition: transform 0.5s ease;
+}
 
+/* couleur de mes cards */
+#card0 {
+ background-color: rgb(239, 236, 206);
+}
 
-/* MEGA MENU STYLE
-********************************/ 
-.mega-menu {
-	padding: 10px 0px ! important;
-	width: 540px;
-  border-radius: 0;
-  margin-top: 0px;
-	}
+#card1 {
+ background-color: rgb(217, 206, 184);
+}
 
-	.mega-menu li {
-		display: inline-block;
-		float: left;
-		font-size: 0.94rem;
-		padding: 3px 0px;
-		}
+#card2 {
+ background-color: rgb(192, 169, 129);
+}
 
-		.mega-menu li.mega-menu-column {
-			margin-right: 20px;
-			width: 150px;
-			}
+#card3 {
+ background-color: rgb(143, 124, 62);
+}
 
-			.mega-menu .nav-header {
-			padding: 0 !important;
-			margin-bottom: 10px;
-			display: inline-block;
-			width: 100%;
-			border-bottom: 1px solid #ddd;
-			}
-      .mega-menu img { padding-bottom: 10px;}
+#card4 {
+ background-color: rgb(95, 56, 37);
+}
 
+/* Etat qui vient écraser le premier lorsque le container obtient la classe active */
 
-
-
-
-
-
-/* Disable Toggle style
-********************************/  
-
-/* Dropdown Toggle on style */
-.navbar .nav li.dropdown.open > .dropdown-toggle, 
-.navbar .nav li.dropdown.active > .dropdown-toggle, 
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
-    background: inherit; /* Set to inherit when using mouse hover to open dropdown */
-    color: inherit;
-    }   
-    /* Toggle off style */
-    .navbar .nav li.dropdown.open.active > .dropdown-toggle,
-    .navbar .nav > li.dropdown > a:focus { 
-    background: inherit;
-    color: inherit;
-    }
-    /* Toggle hover */
-    .navbar .nav li.dropdown > .dropdown-toggle:hover,
-    .navbar .nav li.dropdown.open > .dropdown-toggle:hover {
-    background-color: #DDDDDD;
-    }
-            
-            
-    /* Toggle caret*/
-    .navbar .nav li.dropdown > .dropdown-toggle .caret {
-        border-bottom-color:#DDDDDD ;
-        border-top-color :#ddd;
-        }
-        /* Toggle caret hover */
-        .navbar .nav li.dropdown > a:hover .caret, 
-        .navbar .nav li.dropdown > a:focus .caret {
-        border-bottom-color: #333;
-        border-top-color: #333;
-        }
-        /* Toggle caret active */
-        .navbar .nav li.dropdown.open > .dropdown-toggle .caret, 
-        .navbar .nav li.dropdown.active > .dropdown-toggle .caret, 
-        .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
-        border-bottom-color:#333;
-        border-top-color: #333;
-        }
-
-
-
-/* Hover style
-********************************/ 
-.navbar .nav > li > a, .mega-menu a
- { 
-  -webkit-transition: all 200ms ease;
-	 -moz-transition: all 200ms ease;
-	  -ms-transition: all 200ms ease;
-	   -o-transition: all 200ms ease;
-	      transition: all 200ms ease; 
-	
-		 /* -webkit-transform: translate3d(0, 0, 0); Webkit Hardware Acceleration*/ 
-	     -webkit-backface-visibility: hidden; /* Safari Flicker Fix #2 */
-	     -webkit-transform: translateZ(0);
-}	
+.active {
+  transform: translateY(0px);
+}
